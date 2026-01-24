@@ -1,19 +1,10 @@
 includes:
-  - vendor/larastan/larastan/extension.neon
-  - vendor/nesbot/carbon/extension.neon
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
 
 parameters:
-  paths:
-    - app/
+    paths:
+        - app/
 
-  # Level 10 is the highest level
-  level: 1
-
-  ignoreErrors:
-    # Ignore computed property warnings for $appends in models with legacy accessors
-    - identifier: rules.modelAppends
-
-    # Allow env() in extension/module config files
-    - identifier: larastan.noEnvCallsOutsideOfConfig
-      paths:
-
+    # Level 10 is the highest level
+    level: 5
